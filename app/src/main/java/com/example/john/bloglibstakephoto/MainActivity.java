@@ -44,8 +44,6 @@ public class MainActivity extends TakePhotoActivity {
         //申请相关权限
         initPermission();
 
-        //获取TakePhoto实例进行相关操作
-        takePhoto = getTakePhoto();
         initData();  //设置压缩、裁剪参数
 
         turnBtn = (Button) findViewById(R.id.turn_to_another_activity);
@@ -146,7 +144,7 @@ public class MainActivity extends TakePhotoActivity {
     };
 
     private void initData() {
-        //初始化TakePhoto对象
+        ////获取TakePhoto实例
         takePhoto = getTakePhoto();
         //设置裁剪参数
         cropOptions = new CropOptions.Builder().setAspectX(1).setAspectY(1).setWithOwnCrop(false).create();

@@ -51,8 +51,6 @@ public class FragmentTakePhoto extends TakePhotoFragment {
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-        //获取TakePhoto实例进行相关操作
-        takePhoto = getTakePhoto();
         initData();  //设置压缩、裁剪参数
 
         takeFromCameraBtn = (Button) view.findViewById(R.id.take_from_camera);
@@ -104,7 +102,7 @@ public class FragmentTakePhoto extends TakePhotoFragment {
     }
 
     private void initData() {
-        //初始化TakePhoto对象
+        ////获取TakePhoto实例
         takePhoto = getTakePhoto();
         //设置裁剪参数
         cropOptions = new CropOptions.Builder().setAspectX(1).setAspectY(1).setWithOwnCrop(false).create();

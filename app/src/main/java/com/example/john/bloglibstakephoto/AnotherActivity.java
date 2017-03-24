@@ -55,7 +55,6 @@ public class AnotherActivity extends AppCompatActivity implements TakePhoto.Take
         getTakePhoto().onCreate(savedInstanceState);
         setContentView(R.layout.activity_another);
 
-        takePhoto = getTakePhoto();
         initData();
 
         turnBtn = (Button) findViewById(R.id.turn_to_fragment);
@@ -152,7 +151,7 @@ public class AnotherActivity extends AppCompatActivity implements TakePhoto.Take
     }
 
     private void initData() {
-        //初始化TakePhoto对象
+        //获取TakePhoto实例
         takePhoto = getTakePhoto();
         //设置裁剪参数
         cropOptions = new CropOptions.Builder().setAspectX(1).setAspectY(1).setWithOwnCrop(false).create();
